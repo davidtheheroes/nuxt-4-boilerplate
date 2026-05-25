@@ -12,16 +12,21 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "nuxt.config.*": ".env, .env.*, .prettierrc, .prettierignore, eslint.config.*, vitest.config.*",
+    "nuxt.config.*": ".env, .env.*, .prettierrc, .prettierignore, eslint.config.*, vitest.config.*, commitlint.config.*, lint-staged.config.*",
     "package.json": "package-lock.json, pnpm-lock.yaml, .npmrc, tsconfig.*",
-    "*.ts": "${capture}.test.ts, ${capture}.spec.ts"
+    "*.ts": "${capture}.test.ts, ${capture}.spec.ts, ${capture}.mock.ts"
   },
   "files.exclude": {
     "**/.nuxt": true,
     "**/node_modules": true,
-    "**/.output": true
+    "**/.output": true,
+    "**/dist": true
   },
+  "tailwindCSS.experimental.classRegex": [["ui:\\s*{([^}]*)}", "[\"'`]([^\"'`]*)[\"'`]"]],
   "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
   "files.eol": "\n",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
